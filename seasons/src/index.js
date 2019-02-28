@@ -17,10 +17,14 @@ class App extends React.Component {
     console.log("My component was just updated - it rerendered!");
   }
 
-  render() {
+  renderContent() {
     if (this.state.lat) return <SeasonDisplay lat={this.state.lat} />;
     if (this.state.errMessage) return <div>Error:{this.state.errMessage}</div>;
     return <Spinner message="Please accept location request" />;
+  }
+
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
