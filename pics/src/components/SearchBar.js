@@ -1,7 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: "HELLO!!!" };
+  state = { term: "" };
 
   // three ways to solve "this" issues: arrow function and bind in constructor and arrow in form:
   // constructor() {
@@ -22,9 +22,7 @@ class SearchBar extends React.Component {
             <input
               type="text"
               value={this.state.term}
-              onChange={e =>
-                this.setState({ term: e.target.value.toUpperCase() })
-              }
+              onChange={e => this.setState({ term: e.target.value })}
             />
           </div>
         </form>
