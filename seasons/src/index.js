@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     if (this.state.lat) return <SeasonDisplay lat={this.state.lat} />;
     if (this.state.errMessage) return <div>Error:{this.state.errMessage}</div>;
-    return <Spinner />;
+    return <Spinner message="Please accept location request" />;
   }
 }
 
