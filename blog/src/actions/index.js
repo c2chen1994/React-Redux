@@ -24,6 +24,7 @@ export const fetchUser = id => async dispatch => {
 };
 
 // use _.memoise to solve overfetching
+
 // export const fetchUser = id => dispatch => {
 //   _fetchUser(id, dispatch);
 // };
@@ -33,8 +34,17 @@ export const fetchUser = id => async dispatch => {
 //   dispatch({ type: "FETCH_USER", payload: response.data });
 // });
 
+// action creatos in action creators
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  const uniqueIds = _.uniq(_.map(getState().posts, "userId"));
-  uniqueIds.forEach(id => dispatch(fetchUser(id)));
+
+  //   const uniqueIds = _.uniq(_.map(getState().posts, "userId"));
+  //   uniqueIds.forEach(id => dispatch(fetchUser(id)));
+
+  // use _.chain()
+  _.chain(getState().posts)
+    .map("userId")
+    .uniq()
+    .forEach(id => dispatch(fetchUser(id)))
+    .value();
 };
