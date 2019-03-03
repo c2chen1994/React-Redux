@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/React-Redux/precache-manifest.2c874e82301bc9f8404731a6b68a5ea0.js"
+  "/c2chen1994/React-Redux/tree/gh-pages/videos/precache-manifest.ccf697055fba6f470a3702fe29a0750d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/React-Redux/index.html", {
+workbox.routing.registerNavigationRoute("/c2chen1994/React-Redux/tree/gh-pages/videos/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
