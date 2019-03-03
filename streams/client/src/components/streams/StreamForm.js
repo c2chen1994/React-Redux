@@ -25,6 +25,7 @@ class StreamForm extends React.Component {
 
   onSumbit = formValues => {
     // preventDefault: redux-form does for us
+    //console.log(formValues);
     this.props.onSubmit(formValues);
   };
 
