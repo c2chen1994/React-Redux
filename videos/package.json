@@ -2,7 +2,7 @@
   "name": "videos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/c2chen1994/React-Redux/tree/master/videos",
+  "homepage": "https://c2chen1994.github.io/React-Redux",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.8.3",
